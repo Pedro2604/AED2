@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <math.h>
+#define QUANTIDADE_DE_PONTOS 2
+
+typedef struct {
+    int a;
+    int b;
+}Ponto;
+
+float calculadistancia(Ponto p1, Ponto p2){
+ return (pow(p2.a-p1.a, 2) + pow(p2.b-p1.b, 2));
+}
+
+int main(){
+    Ponto pontos[QUANTIDADE_DE_PONTOS];
+    int dis = 0;
+    
+    scanf("%d", &pontos[0].a);
+    scanf("%d", &pontos[0].b);
+    scanf("%d", &pontos[1].a);
+    scanf("%d", &pontos[1].b);
+    
+    dist = calculadistancia(pontos[0], pontos[1]);
+    
+    printf("A distancia dos os pontos é: %d", dis);
+    
+    return 0;
+}
