@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <math.h>
+#define QUANTIDADE_DE_PONTOS 3
+
+typedef struct {
+    int a;
+    int b;
+}Ponto;
+
+float calculadistancia(Ponto p1, Ponto p2){
+ return (sqrt(pow(p2.a-p1.a, 2) + pow(p2.b-p1.b, 2)));
+}
+
+int main(){
+    Ponto pontos[QUANTIDADE_DE_PONTOS];
+    
+    pontos[0].a=-2; pontos[0].b=4;
+    pontos[1].a=4; pontos[1].b=0;
+    pontos[2].a=10; pontos[2].b=9;
+    
+    float perimetro = 0; 
+    
+    perimetro += calculadistancia(pontos[0], pontos[1]);
+    perimetro += calculadistancia(pontos[1], pontos[2]);
+    perimetro += calculadistancia(pontos[2], pontos[0]);
+    
+    printf("O perimentro do triangulo formado pelos pontos é: %0.1f", perimetro);
+    
+    return 0;
+}
+
